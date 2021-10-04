@@ -14,7 +14,7 @@ load_dotenv("keys.env")
 token = str(os.getenv("TELEGRAM_BOT"))
 chatid = int(os.getenv("CHAT_ID"))
 
-class TwitterStream(StreamListener):
+class MyStreamListener(StreamListener):
 
     def on_data(self,data):
         try:
