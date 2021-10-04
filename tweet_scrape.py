@@ -1,7 +1,7 @@
 import html
 import os
 import time
-import tweepy as tp
+import tweepy
 from telegram import Bot
 from telegram import ParseMode
 import json
@@ -12,7 +12,7 @@ load_dotenv("keys.env")
 token = str(os.getenv("TELEGRAM_BOT"))
 chatid = int(os.getenv("CHAT_ID"))
 
-class TwitterStream(tp.StreamListener):
+class TwitterStream(tweepy.StreamListener):
 
     def on_data(self,data):
         try:
